@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int gameScoreA,gameScoreB, threePointScore, twoPointScore, freePointScore;
+    int gameScoreA,gameScoreB;
     Button teamAthreePointBtn, teamBthreePointBtn, teamAtwoPointBtn,
             teamBtwoPointBtn, teamAFreeThrowBtn, teamBFreeThrowBtn, resetBtn;
     TextView teamAdisplayScore, teamBdisplayScore;
@@ -26,15 +26,15 @@ public class MainActivity extends AppCompatActivity {
 
         teamAthreePointBtn = findViewById(R.id.three_points_button);
         teamBthreePointBtn = findViewById(R.id.three_points_buttonB);
-        threePointScore = 0;
+
 
         teamAtwoPointBtn = findViewById(R.id.two_points_button);
         teamBtwoPointBtn = findViewById(R.id.two_points_buttonB);
-        twoPointScore = 0;
+
 
         teamAFreeThrowBtn = findViewById(R.id.free_throw_points_button);
         teamBFreeThrowBtn = findViewById(R.id.free_throw_points_buttonB);
-        freePointScore = 0;
+
 
         resetBtn = findViewById(R.id.reset_button);
 
@@ -43,11 +43,8 @@ public class MainActivity extends AppCompatActivity {
         teamAthreePointBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                threePointScore+=3;
-                gameScoreA+=threePointScore;
-
-                teamAdisplayScore.setText(String.valueOf(gameScoreA));
+                gameScoreA +=3;
+                displayThreePointsA(gameScoreA);
 
             }
         });
@@ -56,10 +53,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                twoPointScore+=2;
-                gameScoreA+=twoPointScore;
-
-                teamAdisplayScore.setText(String.valueOf(gameScoreA));
+                gameScoreA +=2;
+                displayTwoPointsA(gameScoreA);
 
             }
         });
@@ -68,10 +63,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                freePointScore+=1;
-                gameScoreA+=freePointScore;
-
-                teamAdisplayScore.setText(String.valueOf(gameScoreA));
+                gameScoreA +=1;
+                displayFreePointsA(gameScoreA);
 
             }
         });
@@ -83,10 +76,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                threePointScore+=3;
-                gameScoreB+=threePointScore;
-
-                teamBdisplayScore.setText(String.valueOf(gameScoreB));
+                gameScoreB +=3;
+                displayThreePointsB(gameScoreB);
 
             }
         });
@@ -95,10 +86,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                twoPointScore+=2;
-                gameScoreB+=twoPointScore;
-
-                teamBdisplayScore.setText(String.valueOf(gameScoreB));
+                gameScoreB +=2;
+                displayTwoPointsB(gameScoreB);
 
             }
         });
@@ -107,13 +96,49 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                freePointScore+=1;
-                gameScoreB+=freePointScore;
-
-                teamBdisplayScore.setText(String.valueOf(gameScoreB));
+                gameScoreB +=1;
+                displayFreePointsB(gameScoreB);
 
             }
         });
 
     }
+
+    public void displayThreePointsA(int gameScoreA){
+
+        teamAdisplayScore.setText(String.valueOf(gameScoreA));
+    }
+
+    public void displayTwoPointsA(int gameScoreA){
+
+        teamAdisplayScore.setText(String.valueOf(gameScoreA));
+    }
+
+    public void displayFreePointsA(int gameScoreA){
+
+        teamAdisplayScore.setText(String.valueOf(gameScoreA));
+    }
+
+
+
+    public void displayThreePointsB(int gameScoreB){
+
+        teamBdisplayScore.setText(String.valueOf(gameScoreB));
+    }
+
+    public void displayTwoPointsB(int gameScoreB){
+
+        teamBdisplayScore.setText(String.valueOf(gameScoreB));
+    }
+
+    public void displayFreePointsB(int gameScoreB){
+
+        teamBdisplayScore.setText(String.valueOf(gameScoreB));
+    }
+
+    public void resetScore(){
+
+    }
+
+
 }
