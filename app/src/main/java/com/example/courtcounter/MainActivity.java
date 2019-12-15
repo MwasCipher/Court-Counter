@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int gameScore, threePointScore, twoPointScore, freePointScore;
+    int gameScoreA,gameScoreB, threePointScore, twoPointScore, freePointScore;
     Button teamAthreePointBtn, teamBthreePointBtn, teamAtwoPointBtn,
             teamBtwoPointBtn, teamAFreeThrowBtn, teamBFreeThrowBtn, resetBtn;
     TextView teamAdisplayScore, teamBdisplayScore;
@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        gameScore = 0;
+        gameScoreA = 0;
+        gameScoreB = 0;
 
         teamAdisplayScore = findViewById(R.id.team_A_score_display);
         teamBdisplayScore = findViewById(R.id.team_B_score_display);
@@ -37,14 +38,79 @@ public class MainActivity extends AppCompatActivity {
 
         resetBtn = findViewById(R.id.reset_button);
 
+//        Team A Scores For Three points, Two Points and Free Throws
+
         teamAthreePointBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 threePointScore+=3;
-                gameScore+=threePointScore;
+                gameScoreA+=threePointScore;
 
-                teamAdisplayScore.setText(String.valueOf(gameScore));
+                teamAdisplayScore.setText(String.valueOf(gameScoreA));
+
+            }
+        });
+
+        teamAtwoPointBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                twoPointScore+=2;
+                gameScoreA+=twoPointScore;
+
+                teamAdisplayScore.setText(String.valueOf(gameScoreA));
+
+            }
+        });
+
+        teamAFreeThrowBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                freePointScore+=1;
+                gameScoreA+=freePointScore;
+
+                teamAdisplayScore.setText(String.valueOf(gameScoreA));
+
+            }
+        });
+
+       // Team B Scores For Three points, Two Points and Free Throws
+
+
+        teamBthreePointBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                threePointScore+=3;
+                gameScoreB+=threePointScore;
+
+                teamBdisplayScore.setText(String.valueOf(gameScoreB));
+
+            }
+        });
+
+        teamBtwoPointBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                twoPointScore+=2;
+                gameScoreB+=twoPointScore;
+
+                teamBdisplayScore.setText(String.valueOf(gameScoreB));
+
+            }
+        });
+
+        teamBFreeThrowBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                freePointScore+=1;
+                gameScoreB+=freePointScore;
+
+                teamBdisplayScore.setText(String.valueOf(gameScoreB));
 
             }
         });
