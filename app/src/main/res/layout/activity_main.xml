@@ -16,7 +16,7 @@
         <LinearLayout
             android:id="@+id/first_team_layout"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:layout_weight="1"
             android:orientation="vertical">
@@ -28,8 +28,9 @@
                 android:gravity="center"
                 android:text="Team A"
                 android:textAllCaps="true"
-                android:textColor="@android:color/black"
-                android:textSize="20sp" />
+                android:textColor="#616161"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium"/>
 
             <TextView
                 android:id="@+id/team_A_score_display"
@@ -39,14 +40,17 @@
                 android:hint="0"
                 android:textAlignment="center"
                 android:textAllCaps="true"
-                android:textColor="@android:color/black"
-                android:textSize="30sp" />
+                android:textColor="#000000"
+                android:textSize="56sp"
+                android:fontFamily="sans-serif-light"/>
 
             <Button
                 android:id="@+id/three_points_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
                 android:text="+3 Points"
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
@@ -56,7 +60,9 @@
                 android:id="@+id/two_points_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="8dp"
                 android:text="+2 Points"
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
@@ -66,19 +72,27 @@
                 android:id="@+id/free_throw_points_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="8dp"
                 android:text="Free Throw"
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
         </LinearLayout>
+        
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"
+            android:layout_margin="10dp"></View>
 
 
         <LinearLayout
             android:id="@+id/second_team_layout"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:layout_weight="1"
             android:orientation="vertical">
@@ -90,8 +104,9 @@
                 android:gravity="center"
                 android:text="Team B"
                 android:textAllCaps="true"
-                android:textColor="@android:color/black"
-                android:textSize="20sp" />
+                android:textColor="#616161"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium"/>
 
             <TextView
                 android:id="@+id/team_B_score_display"
@@ -101,14 +116,17 @@
                 android:hint="0"
                 android:textAlignment="center"
                 android:textAllCaps="true"
-                android:textColor="@android:color/black"
-                android:textSize="30sp" />
+                android:textColor="#000000"
+                android:textSize="56sp"
+                android:fontFamily="sans-serif-light"/>
 
             <Button
                 android:id="@+id/three_points_buttonB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
                 android:text="+3 Points"
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
@@ -118,7 +136,9 @@
                 android:id="@+id/two_points_buttonB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="8dp"
                 android:text="+2 Points"
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
@@ -128,7 +148,9 @@
                 android:id="@+id/free_throw_points_buttonB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="8dp"
                 android:text="Free Throw"
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
@@ -145,6 +167,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="15dp"
+        android:layout_marginBottom="32dp"
         android:text="Reset"
         android:textAllCaps="true"
         android:textColor="@android:color/black"
